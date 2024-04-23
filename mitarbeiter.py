@@ -1,4 +1,4 @@
-mitarbeiterliste = [
+mitarbeiter = [
   {"nummer":"1",
    "vorname":"Otto",
    "nachname":"Müller",
