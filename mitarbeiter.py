@@ -1,4 +1,4 @@
-mitarbeiter = [
+mitarbeiterliste = [
   {"nummer":"1",
    "vorname":"Otto",
    "nachname":"Müller",
@@ -27,21 +27,12 @@ mitarbeiter = [
 
 
 def GibMitarbeiter(mitarbeiter):
-  if mitarbeiter.get('vorname'):
-    string='<span id="vorname">'+'Vorname:'+ mitarbeiter["vorname"]+'</span>'+'<br>'
-  if mitarbeiter.get('nachname'):
-    string+='Nachname:' + mitarbeiter["nachname"]+'<br>'
-  if mitarbeiter.get('strasse'):
-    string+='Straße:' + mitarbeiter["strasse"]+'<br>'
-  if mitarbeiter.get('stadt'):
-    string+='Stadt:' + mitarbeiter["stadt"]+'<br>'
-  if mitarbeiter.get('tel'):
-    string+='Tel:' + mitarbeiter["telefon"]+'<br>'
-  if mitarbeiter.get('plz'):
-    string+='Plz:' + mitarbeiter["plz"]+'<br>'
-  if mitarbeiter.get('nummer'):
-    string+='Nummer:' + mitarbeiter["nummer"]+'<br>'
-    return string
+
+  result = ""
+  for attr, value in mitarbeiter.__dict__.items():
+        result += f'<span id="{attr}">{attr}: {value}</span><br>'
+  return result
+
 
 def GibBestimmtenMitarbeiter(mitarbeiterliste,mitarbeiternummer):
   for mitarbeiter in mitarbeiterliste:
