@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title> MA </title>
+	<meta name="description" content="Mitarbeiter eingeben" >
+	<link href="{{ url_for('static', filename='mein-style.css') }}" rel="stylesheet" type="text/css" >
+</head>
+<body>
+	<form action="upload" method="post">
+        <label for="mname">Bitte Namen eingeben</label>
+        <input type="text" name="Mname" id="mname" value="" required>
+        <button type="submit">Abschicken</button>
+    </form>      
+
+        <footer>
+		Autor:Häußler - email@mail.de
+	</footer>
+</body>
+</html>

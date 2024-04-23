@@ -1,0 +1,19 @@
+h1{
+	color: indigo;
+}
+
+body{
+	font-family: verdana;
+	font-size: 87,5%;
+	background-color: AliceBlue;
+}
+
+span#vorname{
+	color: green;
+}
+
+#absatz1{
+	border: 10px solid black;
+	padding: 35px;
+	margin: 12px;
+}
